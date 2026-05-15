@@ -1,1 +1,58 @@
-{\n    \"name\": \"laravel/laravel\",\n    \"type\": \"project\",\n    \"description\": \"The Laravel Framework.\",\n    \"keywords\": [\"framework\", \"laravel\"],\n    \"license\": \"MIT\",\n    \"require\": {\n        \"php\": \"^7.4\",\n        \"laravel/framework\": \"^8.83\",\n        \"laravel/tinker\": \"^2.5\"\n    },\n    \"require-dev\": {\n        \"fakerphp/faker\": \"^1.9.1\",\n        \"laravel/sail\": \"^1.0.1\",\n        \"mockery/mockery\": \"^1.3.1\",\n        \"nunomaduro/collision\": \"^5.3\",\n        \"phpunit/phpunit\": \"^9.3.5\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\\": \"app/\",\n            \"Database\\\\Factories\\\\\": \"database/factories/\",\n            \"Database\\\\Seeders\\\\\": \"database/seeders/\"\n        }\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"Tests\\\\\": \"tests/\"\n        }\n    },\n    \"scripts\": {\n        \"post-autoload-dump\": [\n            \"Illuminate\\\\Foundation\\\\ComposerScripts::postAutoloadDump\",\n            \"@php artisan package:discover --ansi\"\n        ],\n        \"post-root-package-install\": [\n            \"@php -r \\\"file_exists('.env') || copy('.env.example', '.env');\\\"\"\n        ],\n        \"post-create-project-cmd\": [\n            \"@php artisan key:generate --ansi\"\n        ]\n    },\n    \"config\": {\n        \"preferred-install\": \"dist\",\n        \"sort-packages\": true,\n        \"optimize-autoloader\": true\n    },\n    \"minimum-stability\": \"dev\",\n    \"prefer-stable\": true\n}\n
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+
+    "require": {
+        "php": "^7.4",
+        "laravel/framework": "^8.75",
+        "laravel/tinker": "^2.5"
+    },
+
+    "require-dev": {
+        "fakerphp/faker": "^1.9.1",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^5.10",
+        "phpunit/phpunit": "^9.5"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
